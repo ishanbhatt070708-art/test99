@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TripMate: find trusted student travel companions and book group trips.">
+  <meta name="keywords" content="student trips, travel companions, group trips, college travel">
+  <title>TripMate | Travel with students you can trust</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- HEADER + NAVIGATION -->
+
+  <header>
+    <hgroup>
+      <h1>TripMate - By Ishan</h1>
+      <p>Travel with students you can trust.</p>
+    </hgroup>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/trips.html">Trips</a></li>
+        <li><a href="pages/host.html">Host a Trip</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="pages/register.html">Register</a></li>
+        <li><a href="pages/login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero">
+      <h2>Don't plan your next trip alone.</h2>
+
+      <p>
+        TripMate is one place where
+        <strong>students find travel companions</strong>,
+        join upcoming trips and host their own. Every traveller registers with a
+        college <abbr title="Identification">ID</abbr>, so you always know who you are
+        travelling with.
+      </p>
+
+      <p>
+        Safe, affordable and social, built for college students.
+      </p>
+
+      <p>
+        <a class="btn" href="pages/register.html">Register with your student ID</a>
+        <a class="btn btn-light" href="pages/trips.html">Browse trips</a>
+      </p>
+    </section>
+
+
+    <!-- SEARCH -->
+    <section id="search-section">
+      <h2>Find your trip</h2>
+
+      <search>
+        <form action="pages/trips.html" method="get">
+
+          <fieldset>
+            <legend>Trip search</legend>
+
+            <p>
+              <label for="destination"><strong>Destination</strong></label><br>
+
+              <select id="destination" name="destination">
+                <option value="any" selected>Anywhere</option>
+                <option value="manali">Manali</option>
+                <option value="goa">Goa</option>
+                <option value="jaipur">Jaipur</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="start"><strong>Travel from</strong></label><br>
+
+              <input type="date" id="start" name="start">
+            </p>
+
+            <p>
+              <label for="budget">
+                <strong>Budget per person (₹)</strong>
+              </label><br>
+
+              <input
+                type="number"
+                id="budget"
+                name="budget"
+                min="500"
+                placeholder="e.g. 8000"
+                required
+              >
+            </p>
+
+            <p>
+              <strong>Trip style</strong><br>
+
+              <input
+                type="radio"
+                id="any-style"
+                name="style"
+                value="any"
+                checked
+              >
+              <label for="any-style">Any</label>
+
+              <input
+                type="radio"
+                id="chill"
+                name="style"
+                value="chill"
+              >
+              <label for="chill">Relaxed</label>
+
+              <input
+                type="radio"
+                id="adventure"
+                name="style"
+                value="adventure"
+              >
+              <label for="adventure">Adventure</label>
+            </p>
+
+            <p>
+              <input
+                type="checkbox"
+                id="girls"
+                name="filter"
+                value="verified"
+              >
+
+              <label for="girls">
+                Show only trips where every traveller is ID-verified
+              </label>
+            </p>
+
+            <p>
+              <button type="submit">Search trips</button>
+              <button type="reset">Reset</button>
+            </p>
+
+          </fieldset>
+
+        </form>
+      </search>
+    </section>
+
+
+    <!-- FEATURED TRIPS -->
+    <section id="featured">
+
+      <h2>Upcoming trips</h2>
+
+      <p>
+        <small>Sample trips shown for demonstration.</small>
+      </p>
+
+      <div class="cards">
+
+        <!-- MANALI -->
+        <article data-trip="manali" data-seats="6">
+          <figure>
+            <img
+              src="images/mountain.svg"
+              alt="Snow-capped mountains under a bright sun, representing Manali"
+              width="300"
+            >
+
+            <figcaption>Manali, Himachal Pradesh</figcaption>
+          </figure>
+
+          <h3>Manali Snow Escape</h3>
+
+          <dl>
+            <dt>Dates</dt>
+            <dd>
+              <time datetime="2026-12-20">20 Dec 2026</time>
+            </dd>
+
+            <dt>Cost per person</dt>
+            <dd>
+              ₹<data value="9500">9,500</data>
+            </dd>
+
+            <dt>Seats left</dt>
+            <dd class="seats">6</dd>
+          </dl>
+
+          <p>
+            <a class="btn" href="pages/trips.html#manali">View trip</a>
+          </p>
+        </article>
+
+
+        <!-- GOA -->
+        <article data-trip="goa" data-seats="4">
+          <figure>
+            <img
+              src="images/beach.svg"
+              alt="Sandy beach with a palm tree and calm sea, representing Goa"
+              width="300"
+            >
+
+            <figcaption>Goa, India</figcaption>
+          </figure>
+
+          <h3>Goa Beach Break</h3>
+
+          <dl>
+            <dt>Dates</dt>
+            <dd>
+              <time datetime="2027-01-10">10 Jan 2027</time>
+            </dd>
+
+            <dt>Cost per person</dt>
+            <dd>
+              ₹<data value="7800">7,800</data>
+            </dd>
+
+            <dt>Seats left</dt>
+            <dd class="seats">4</dd>
+          </dl>
+
+          <p>
+            <a class="btn" href="pages/trips.html#goa">View trip</a>
+          </p>
+        </article>
+
+
+        <!-- JAIPUR -->
+        <article data-trip="jaipur" data-seats="9">
+          <figure>
+            <img
+              src="images/fort.svg"
+              alt="Red sandstone fort at sunset, representing Jaipur"
+              width="300"
+            >
+
+            <figcaption>Jaipur, Rajasthan</figcaption>
+          </figure>
+
+          <h3>Jaipur Heritage Weekend</h3>
+
+          <dl>
+            <dt>Dates</dt>
+            <dd>
+              <time datetime="2026-11-28">28 Nov 2026</time>
+            </dd>
+
+            <dt>Cost per person</dt>
+            <dd>
+              ₹<data value="4200">4,200</data>
+            </dd>
+
+            <dt>Seats left</dt>
+            <dd class="seats">9</dd>
+          </dl>
+
+          <p>
+            <a class="btn" href="pages/trips.html#jaipur">View trip</a>
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- TABLE -->
+    <section id="compare">
+
+      <h2>Trips at a glance</h2>
+
+      <table>
+
+        <caption>Comparison of upcoming sample trips</caption>
+
+        <colgroup>
+          <col>
+          <col>
+          <col class="highlight-col">
+        </colgroup>
+
+        <tr>
+          <th>Trip</th>
+          <th colspan="2">Details</th>
+        </tr>
+
+        <tr>
+          <td>Manali Snow Escape</td>
+          <td>20 Dec 2026</td>
+          <td>₹9,500</td>
+        </tr>
+
+        <tr>
+          <td>Goa Beach Break</td>
+          <td>10 Jan 2027</td>
+          <td>₹7,800</td>
+        </tr>
+
+        <tr>
+          <td>Jaipur Heritage Weekend</td>
+          <td>28 Nov 2026</td>
+          <td>₹4,200</td>
+        </tr>
+
+      </table>
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section id="how">
+
+      <h2>How it works</h2>
+
+      <ol>
+        <li>Register with your name, college and student ID.</li>
+        <li>Browse trips or search by destination, date and budget.</li>
+        <li>Join a trip, or create your own and set the number of seats.</li>
+        <li>See who is travelling with you and pack your bags.</li>
+      </ol>
+
+    </section>
+
+
+    <!-- WHY TRIPMATE -->
+    <section id="why">
+
+      <h2>Why students choose TripMate</h2>
+
+      <ul>
+        <li>ID-based registration builds a trusted student community.</li>
+        <li>One central place instead of scattered WhatsApp groups.</li>
+        <li>Clear cost, dates and seats before you decide.</li>
+        <li>Works on mobile and desktop.</li>
+      </ul>
+
+      <blockquote cite="https://example.com/sample-feedback">
+        I found my whole Goa group in one evening. It felt safe because everyone was a registered student.
+      </blockquote>
+
+      <p>
+        <small>Sample feedback, for demonstration only.</small>
+      </p>
+
+    </section>
+
+
+    <!-- CALL TO ACTION -->
+    <section id="join">
+
+      <h2>Ready for your first trip?</h2>
+
+      <p>
+        Create your free account in a minute.
+        Keep your <strong>college ID</strong> handy.
+      </p>
+
+      <p>
+        <a class="btn" href="pages/register.html">Get started</a>
+      </p>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <hr>
+
+    <div>
+      <h3>Quick links</h3>
+
+      <a href="pages/about.html">About us</a> |
+      <a href="pages/contact.html">Contact</a> |
+      <a href="pages/login.html">Login</a>
+    </div>
+
+    <address>
+      <strong>TripMate</strong><br>
+      South Asian University, New Delhi, India<br>
+
+      Email:
+      <a href="mailto:hello@tripmate.example">
+        hello@tripmate.example
+      </a>
+    </address>
+
+    <p>
+      <small>
+        &copy; 2026 TripMate.
+        A student project for Fundamentals of Web Design.
+      </small>
+    </p>
+
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
